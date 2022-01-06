@@ -18,12 +18,12 @@ contract VibloToken is ERC20 {
     mapping (address => uint256) internal balances;
     mapping (address => mapping (address => uint256)) internal allowed;
 
-    constructor(string memory name1, string memory symbol1, uint8 decimals1, uint256 totalSupply1) {
-        _symbol = symbol1;
-        _name = name1;
-        _decimals = decimals1;
-        _totalSupply = totalSupply1;
-        balances[msg.sender] = totalSupply1;
+    constructor(string memory name, string memory symbol, uint8 decimals, uint256 totalSupply) {
+        _symbol = symbol;
+        _name = name;
+        _decimals = decimals;
+        _totalSupply = totalSupply;
+        balances[msg.sender] = totalSupply;
     }
 
     function name() public view returns (string memory) {
